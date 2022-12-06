@@ -63,16 +63,6 @@ function LoginForm({ onLogin, showError }) {
           showError(err.message);
         }
       });
-
-    // if (email === 'admin@example.com' & password === 'password') {
-    //   setSuccess('Valid Credentials');
-    //   const auth = {
-    //     email,
-    //   }
-    //   onLogin(auth);
-    // } else {
-    //   setError('Invalid Credentials');
-    // }
   }
 
   function onInputChange(evt, setValue) {
@@ -109,6 +99,8 @@ function LoginForm({ onLogin, showError }) {
             Login
           </button>
         </div>
+        <div>Don't have an account yet?</div>
+        <a href='/register'> Register Here</a>
         {error && <div className="mb-3 text-danger">{error}</div>}
         {success && <div className="mb-3 text-success">{success}</div>}
       </form>
